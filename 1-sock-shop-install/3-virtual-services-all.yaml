@@ -30,4 +30,4 @@ spec:
     - destination:
         host: front-end
         port:
-          number: 30001
+          number: 80
