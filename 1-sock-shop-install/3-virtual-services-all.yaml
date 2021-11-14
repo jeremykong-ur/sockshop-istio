@@ -28,4 +28,6 @@ spec:
         regex: '^.*\.(ico|png|jpg|html)$'
     route:
     - destination:
-        host: front-end.mysockshop.svc.cluster.local
+        host: front-end
+        port:
+          number: 30001
