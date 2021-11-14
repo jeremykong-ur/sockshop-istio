@@ -640,12 +640,12 @@ spec:
   ports:
     # the port that this service should serve on
   - port: 5672
-    name: rabbitmq
+    name: tcp-rabbitmq
     targetPort: 5672
   - port: 4369
-    name: epmd
+    name: tcp-epmd
   - port: 9090
-    name: exporter
+    name: tcp-exporter
     targetPort: exporter
     protocol: TCP
   selector:
