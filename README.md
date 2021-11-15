@@ -25,7 +25,6 @@ Sockshop demo with Istio service mesh
 Refer to [Istio Bookinfo](https://istio.io/latest/docs/examples/bookinfo/)
 
 ```                                                                             
-                                        
 kubectl create namespace sock-shop
 kubectl label namespace sock-shop istio-injection=enabled
 kubectl apply -f 1-sock-shop-install/1-sock-shop-complete-demo-istio.yaml
