@@ -1,0 +1,167 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: carts
+spec:
+  host: carts
+  subsets:
+  - name: v1
+    labels:
+      version: v1
+      name: carts
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: carts-db
+spec:
+  host: carts-db
+  subsets:
+  - name: v1
+    labels:
+      version: v1
+      name: carts-db
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: catalogue
+spec:
+  host: catalogue
+  subsets:
+  - name: v1
+    labels:
+      version: v1
+      name: catalogue
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: catalogue-db
+spec:
+  host: catalogue-db
+  subsets:
+  - name: v1
+    labels:
+      version: v1
+      name: catalogue-db
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: front-end
+spec:
+  host: front-end
+  subsets:
+  - name: v1
+    labels:
+      version: v1
+      name: front-end
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: orders
+spec:
+  host: orders
+  subsets:
+  - name: v1
+    labels:
+      version: v1
+      name: orders
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: orders-db
+spec:
+  host: orders-db
+  subsets:
+  - name: v1
+    labels:
+      version: v1
+      name: orders-db
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: payment
+spec:
+  host: payment
+  subsets:
+  - name: v1
+    labels:
+      version: v1
+      name: payment
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: queue-master
+spec:
+  host: queue-master
+  subsets:
+  - name: v1
+    labels:
+      version: v1
+      name: queue-master
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: rabbitmq
+spec:
+  host: rabbitmq
+  subsets:
+  - name: v1
+    labels:
+      version: v1
+      name: rabbitmq
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: session-db
+spec:
+  host: session-db
+  subsets:
+  - name: v1
+    labels:
+      version: v1
+      name: session-db
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: shipping
+spec:
+  host: shipping
+  subsets:
+  - name: v1
+    labels:
+      version: v1
+      name: shipping
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: user
+spec:
+  host: user
+  subsets:
+  - name: v1
+    labels:
+      version: v1
+      name: user
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: user-db
+spec:
+  host: user-db
+  subsets:
+  - name: v1
+    labels:
+      version: v1
+      name: user-db
