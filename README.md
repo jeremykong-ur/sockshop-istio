@@ -22,11 +22,15 @@ Sockshop demo with Istio service mesh
 
 1. Install Istio-1.0.4 using helm charts.
 2. Deploy sock-shop application.
+Refer to [Istio Bookinfo](https://istio.io/latest/docs/examples/bookinfo/)
 
-```                                                                                                                         
-kubectl apply -f 1-sock-shop-install/1-sock-shop-complete-demo-istio.yaml -nsock-shop
-istioctl install -f 1-sock-shop-install/2-sockshop-gateway.yaml -nsock-shop
-istioctl install -f 1-sock-shop-install/3-virtual-services-all.yaml -nsock-shop
+```                                                                             
+                                        
+kubectl create namespace sock-shop
+kubectl label namespace sock-shop istio-injection=enabled
+kubectl apply -f 1-sock-shop-install/1-sock-shop-complete-demo-istio.yaml
+kubectl apply -f 1-sock-shop-install/2-sockshop-gateway.yaml
+kubectl apply -f 1-sock-shop-install/3-destination-rules.yaml
 ```
 
 ### Note:
