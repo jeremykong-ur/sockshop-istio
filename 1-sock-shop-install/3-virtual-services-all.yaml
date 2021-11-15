@@ -25,6 +25,10 @@ spec:
     - uri:
         prefix: /img
     - uri:
+        prefix: /login
+    - uri:
+        prefix: /orders
+    - uri:
         regex: '^.*\.(ico|png|jpg|html)$'
     route:
     - destination:
